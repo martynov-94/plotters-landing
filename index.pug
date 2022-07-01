@@ -1,0 +1,52 @@
+include build/project.pug
+
+-
+  const IMG_PATH = "img/plotters/";
+  let plotters = [
+    {
+      name: "Режущие плоттеры Jinka PE",
+      img: IMG_PATH + "jinka_pe.jpg",
+      link: "buy/jinka_pe.html"
+    },
+    {
+      name: "Режущие плоттеры Jinka XL",
+      img: IMG_PATH + "jinka_xl.jpg",
+      link: "buy/jinka_xl.html"
+    },
+    {
+      name: "Режущие плоттеры Rabbit N",
+      img: IMG_PATH + "rabbit_n.jpg",
+      link: "buy/rabbit_n.html"
+    },
+    {
+      name: "Режущие плоттеры с автоматической контурной резкой Rabbit K3",
+      img: IMG_PATH + "rabbit_k3.jpg",
+      link: "buy/rabbit_k3.html"
+    },
+    {
+      name: "Термопрессы",
+      add_info: "Акция: бесплатная доставка по России",
+      img: IMG_PATH + "heat_press.jpg",
+      link: "buy/heat_press.html"
+    },
+    {
+      name: "Фрезерные станки",
+      img: IMG_PATH + "frayser.jpg",
+      link: "buy/frayser.html"
+    },
+    {
+      name: "Комплектующие и оборудование",
+      img: IMG_PATH + "accessories.jpg",
+      link: "accessories.html",
+    },
+  ];
+
+  let classNames = {
+    item: "plotters__item",
+    img: "plotters__item-img",
+    h2: "plotters__item-title"
+  };
+
++page("Плоттеры, станки, комплектующие в России", 0)
+  ul.goods-categories
+    +goods-categories(plotters)
