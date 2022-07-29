@@ -1,0 +1,74 @@
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
+  // height: 400px;
+
+  color: white;
+
+  &__backdrop {
+    position: absolute;
+    z-index: 1;
+
+    width: 100%;
+
+    background: no-repeat url(components/description/img/hero_image_2.jpg);
+    background-size: cover;
+    filter: brightness(0.5) contrast(0.5);
+  }
+
+  &__products-types {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px;
+  }
+
+  &__products-type {
+    // margin: 20px;
+    margin-bottom: 30px;
+
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 6px black;
+
+    filter: unset;
+  }
+
+  &__points {
+    margin: 30px 5vw 0 10vw;
+
+    list-style-type: initial;
+  }
+
+  &__point {
+    margin-bottom: 15px;
+
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+  }
+
+  &__catalog-link {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px 40px;
+
+    font-family: $font-default;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: #413f35 2px 2px;
+
+    background-image: linear-gradient(to right, rgb(111, 0, 255), rgb(158, 55, 255));
+    border: 1px solid rgb(111, 0, 255);
+    border-radius: 10px;
+  }
+}

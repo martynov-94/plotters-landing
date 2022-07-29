@@ -1,0 +1,49 @@
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Exo 2', sans-serif;
+
+  background-color: #d4cac5;
+  overflow-x: hidden;
+}
+
+.visually-hidden {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+}
+
+button:focus {
+  outline: 1px solid #0069ed;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 101vh;
+  padding-top: 20px;
+  // padding: 20px 5vw 0;
+
+  background-color: #d4cac5;
+
+  // @media screen and (min-width: 48em) {
+  //   width: 75vw;
+  // }
+}
+
+.shown {
+  transform: scaleY(1);
+}
