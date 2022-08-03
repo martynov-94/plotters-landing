@@ -1,30 +1,25 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="ru">
   <head>
-    <title>Плоттеры, станки, комплектующие в России</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Плоттеры, станки, комплектующие в России</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&amp;display=swap" rel="stylesheet">
   </head>
-
   <body>
-    <!-- <script src="https://unpkg.com/vue@next"></script> -->
-
     <div class="wrapper">
-      <header class="page-header">
+      <header class="page-header" id="page-header">
         <section class="page-header__logo">
           <h2 class="page-header__title">CPU-Plotters</h2>
           <p class="page-header__description">(плоттеры и комплектующие)</p>
         </section>
         <div class="page-header__menu-container">
-          <button class="page-header__menu-btn menu-btn">Меню 
-            <img class="menu-btn__icon" src="components/page-header/img/hamburger-icon.png" width="30" height="30" alt="Кнопка меню">
-          </button>
-          <nav class="page-header__main-menu main-menu">
+          <button class="page-header__menu-btn menu-btn">Меню<img class="menu-btn__icon" src="components/page-header/img/hamburger-icon.png" width="30" height="30" alt="Кнопка меню"/></button>
+          <nav class="page-header__main-menu main-menu" id="main-menu">
             <ul class="main-menu__list">
               <li class="main-menu__item">Режущие плоттеры</li>
               <li class="main-menu__item">Термопрессы</li>
@@ -36,18 +31,12 @@
             </ul>
           </nav>
         </div>
-        <section class="page-header__contact-btns">
-          <a class="page-header__contact-block" href="tel://+79622021066">📞 8 (962) 202-10-66</a>
-          <a class="page-header__contact-block" href="tel://+79159916553">📞 8 (915) 991-65-53</a>
-          <div class="page-header__contact-block page-header__social-buttons">
-            <a class="page-header__social-btn" target="_blank" href="https://api.whatsapp.com/send?phone=79622021066&text="><img src="components/page-header/img/whatsapp-icon.svg" width="35" height="35" alt="whatsapp"></a>
-            <a class="page-header__social-btn" target="_blank" href="viber://chat?number=%2B79622021066"><img src="components/page-header/img/viber-icon.svg" width="35" height="35" alt="viber"></a>
-          </div>
+        <section class="page-header__contact-btns"><a class="page-header__contact-block" href="tel://+79622021066">📞 8 (962) 202-10-66</a><a class="page-header__contact-block" href="tel://+79159916553">📞 8 (915) 991-65-53</a>
+          <div class="page-header__contact-block page-header__social-buttons"><a class="page-header__social-btn" target="_blank" href="https://api.whatsapp.com/send?phone=79622021066&amp;text="><img src="components/page-header/img/whatsapp-icon.svg" width="35" height="35" alt="whatsapp"/></a><a class="page-header__social-btn" target="_blank" href="viber://chat?number=%2B79622021066"><img src="components/page-header/img/viber-icon.svg" width="35" height="35" alt="viber"/></a></div>
         </section>
-        <button class="page-header__order-btn">Заказать</button>
+        <button class="page-header__order-btn btn">Заказать</button>
       </header>
-
-      <section class="description">
+      <section class="description" id="description">
         <div class="description__backdrop"></div>
         <div class="description__products-types">
           <p class="description__products-type">Режущие плоттеры для производства рекламной продукции</p>
@@ -58,16 +47,91 @@
           <li class="description__point">Бесплатная настройка и обучение</li>
           <li class="description__point">Быстрая доставка по России</li>
           <li class="description__point">Наложенный платеж и безналичная оплата</li>
+        </ul><a class="description__catalog-link btn" href="#catalog">Перейти в каталог</a>
+      </section>
+      <section class="catalog" id="catalog">
+        <p class="catalog__title">Надежные и недорогие в обслуживании режущие плоттеры и термопрессы, с гарантией</p>
+        <ul class="catalog__plotters">
+          <li class="catalog__plotter">
+            <div class="catalog__plotter-card plotter-card"><img class="plotter-card__pic" src="img/plotters/jinka_jk-365_pe.jpg" width="" height="" alt="Плоттер Jinka JK-365 PE"/>
+              <h2 class="plotter-card__name">Jinka JK-365 PE</h2>
+              <p class="plotter-card__price">14 500р.</p>
+              <button class="plotter-card__more-btn btn btn_small">Подробнее</button>
+            </div>
+          </li>
+          <li class="catalog__plotter">
+            <div class="catalog__plotter-card plotter-card"><img class="plotter-card__pic" src="img/plotters/jinka_jk-721_pe.jpg" width="" height="" alt="Плоттер Jinka JK-721 PE"/>
+              <h2 class="plotter-card__name">Jinka JK-721 PE</h2>
+              <p class="plotter-card__price">28 500р.</p>
+              <button class="plotter-card__more-btn btn btn_small">Подробнее</button>
+            </div>
+          </li>
+          <li class="catalog__plotter">
+            <div class="catalog__plotter-card plotter-card"><img class="plotter-card__pic" src="img/plotters/jinka_jk-1101_pe.jpg" width="" height="" alt="Плоттер Jinka JK-1101 PE"/>
+              <h2 class="plotter-card__name">Jinka JK-1101 PE</h2>
+              <p class="plotter-card__price">33 700р.</p>
+              <button class="plotter-card__more-btn btn btn_small">Подробнее</button>
+            </div>
+          </li>
+          <li class="catalog__plotter">
+            <div class="catalog__plotter-card plotter-card"><img class="plotter-card__pic" src="img/plotters/jinka_jk-1351_pe.jpg" width="" height="" alt="Плоттер Jinka JK-1351 PE"/>
+              <h2 class="plotter-card__name">Jinka JK-1351 PE</h2>
+              <p class="plotter-card__price">39 000р.</p>
+              <button class="plotter-card__more-btn btn btn_small">Подробнее</button>
+            </div>
+          </li>
+          <li class="catalog__plotter">
+            <div class="catalog__plotter-card plotter-card"><img class="plotter-card__pic" src="img/plotters/rabbit_hx_1360n.webp" width="" height="" alt="Плоттер Rabbit HX 1360N"/>
+              <h2 class="plotter-card__name">Rabbit HX 1360N</h2>
+              <p class="plotter-card__price">39 300р.</p>
+              <button class="plotter-card__more-btn btn btn_small">Подробнее</button>
+            </div>
+          </li>
+          <li class="catalog__plotter">
+            <div class="catalog__plotter-card plotter-card"><img class="plotter-card__pic" src="img/plotters/rabbit_hx_1360k3.jpg" width="" height="" alt="Плоттер Rabbit HX 1360K3"/>
+              <h2 class="plotter-card__name">Rabbit HX 1360K3</h2>
+              <p class="plotter-card__price">50 000р.</p>
+              <button class="plotter-card__more-btn btn btn_small">Подробнее</button>
+            </div>
+          </li>
+          <li class="catalog__plotter">
+            <div class="catalog__plotter-card plotter-card"><img class="plotter-card__pic" src="img/plotters/rabbit_hx_1780k3.jpg" width="" height="" alt="Плоттер Rabbit HX 1780K3"/>
+              <h2 class="plotter-card__name">Rabbit HX 1780K3</h2>
+              <p class="plotter-card__price"></p>
+              <button class="plotter-card__more-btn btn btn_small">Подробнее</button>
+            </div>
+          </li>
+          <li class="catalog__plotter">
+            <div class="catalog__plotter-card plotter-card"><img class="plotter-card__pic" src="img/plotters/jinka_xl-1101.jpg" width="" height="" alt="Плоттер Jinka XL-1101"/>
+              <h2 class="plotter-card__name">Jinka XL-1101</h2>
+              <p class="plotter-card__price">28 500р.</p>
+              <button class="plotter-card__more-btn btn btn_small">Подробнее</button>
+            </div>
+          </li>
+          <li class="catalog__plotter">
+            <div class="catalog__plotter-card plotter-card"><img class="plotter-card__pic" src="img/plotters/jinka_xl-1661.jpg" width="" height="" alt="Плоттер Jinka XL-1661"/>
+              <h2 class="plotter-card__name">Jinka XL-1661</h2>
+              <p class="plotter-card__price">51 500р.</p>
+              <button class="plotter-card__more-btn btn btn_small">Подробнее</button>
+            </div>
+          </li>
+          <li class="catalog__plotter">
+            <div class="catalog__plotter-card plotter-card"><img class="plotter-card__pic" src="img/plotters/thj-38.jpg" width="" height="" alt="Термопресс THJ-38"/>
+              <h2 class="plotter-card__name">Термопресс THJ-38</h2>
+              <p class="plotter-card__price">22 600р.</p>
+              <button class="plotter-card__more-btn btn btn_small">Подробнее</button>
+            </div>
+          </li>
+          <li class="catalog__plotter">
+            <div class="catalog__plotter-card plotter-card"><img class="plotter-card__pic" src="img/plotters/thj-45.jpg" width="" height="" alt="Термопресс THJ-45"/>
+              <h2 class="plotter-card__name">Термопресс THJ-45</h2>
+              <p class="plotter-card__price">32 500р.</p>
+              <button class="plotter-card__more-btn btn btn_small">Подробнее</button>
+            </div>
+          </li>
         </ul>
-        <a class="description__catalog-link" href="#">Перейти в каталог</a>
       </section>
-
-      <section class="catalog">
-        <p>Надежные и недорогие в обслуживании режущие плоттеры, с гарантией</p>
-      </section>
-
     </div>
-
     <script src="script.js"></script>
   </body>
 </html>

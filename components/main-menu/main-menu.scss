@@ -1,0 +1,38 @@
+.main-menu {
+  width: 100%;
+
+  @media (min-width: $breakpoint-large) {
+  }
+
+  &__item {
+    padding: 8px 15px;
+    padding-left: 15px;
+
+    font-size: 1rem;
+    text-align: left;
+
+    background-color: #e7eff3;
+    border-bottom: 1px solid gray;
+
+    transition: all 0.1s;
+
+    @media (min-width: $breakpoint-large) {
+      font-size: 1.5rem;
+    }
+
+    &:first-of-type {
+      border-top: 1px solid black;
+    }
+
+    &:last-of-type {
+      border-color: black;
+    }
+
+    &:hover {
+      background-color: gray;
+      color: white;
+
+      cursor: pointer;
+    }
+  }
+}

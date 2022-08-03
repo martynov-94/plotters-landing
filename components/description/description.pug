@@ -1,0 +1,23 @@
+-
+  const descriptionProductsTypes = [
+    "Режущие плоттеры для производства рекламной продукции",
+    "Термопрессы для термопереноса на одежду"
+  ];
+
+  const descriptionPoints = [
+    "Поможем подобрать режущий плоттер, подходящий под ваши цели и задачи",
+    "Бесплатная настройка и обучение",
+    "Быстрая доставка по России",
+    "Наложенный платеж и безналичная оплата"
+  ];
+
+mixin description(className)
+  section(class=className id="description")
+    .description__backdrop
+    .description__products-types
+      each productsType in descriptionProductsTypes
+        p.description__products-type= productsType
+    ul.description__points
+      each point in descriptionPoints
+        li.description__point= point
+    a.description__catalog-link.btn(href="#catalog")="Перейти в каталог"

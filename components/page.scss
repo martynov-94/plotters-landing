@@ -34,16 +34,45 @@ button:focus {
   display: flex;
   flex-direction: column;
   min-height: 101vh;
-  padding-top: 20px;
+  // padding-top: 20px;
   // padding: 20px 5vw 0;
 
   background-color: #d4cac5;
 
-  // @media screen and (min-width: 48em) {
-  //   width: 75vw;
-  // }
+  @media (min-width: $breakpoint-large) {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    // padding-left: 300px;
+  }
 }
 
 .shown {
   transform: scaleY(1);
+}
+
+.btn {
+  padding: 20px 40px;
+
+  font-family: $font-default;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: #413f35 2px 2px;
+
+  background-image: linear-gradient(to right, rgb(111, 0, 255), rgb(158, 55, 255));
+  border: 1px solid rgb(111, 0, 255);
+  border-radius: 10px;
+  
+  transition: background-image 1s;
+
+  &_small {
+    padding: 12px 25px;
+
+    font-size: 1.4rem;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to left, rgb(111, 0, 255), rgb(158, 55, 255));
+  }
 }

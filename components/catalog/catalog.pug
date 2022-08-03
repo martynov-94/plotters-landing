@@ -1,0 +1,121 @@
+-
+  const catalogPlotters = [
+    {
+      name: "Jinka JK-365 PE",
+      price: "14 500р.",
+      img: {
+        src: "jinka_jk-365_pe.jpg",
+        width: "",
+        height: "",
+        alt: "Плоттер Jinka JK-365 PE"
+      },
+    },
+    {
+      name: "Jinka JK-721 PE",
+      price: "28 500р.",
+      img: {
+        src: "jinka_jk-721_pe.jpg",
+        width: "",
+        height: "",
+        alt: "Плоттер Jinka JK-721 PE"
+      },
+    },
+    {
+      name: "Jinka JK-1101 PE",
+      price: "33 700р.",
+      img: {
+        src: "jinka_jk-1101_pe.jpg",
+        width: "",
+        height: "",
+        alt: "Плоттер Jinka JK-1101 PE"
+      },
+    },
+    {
+      name: "Jinka JK-1351 PE",
+      price: "39 000р.",
+      img: {
+        src: "jinka_jk-1351_pe.jpg",
+        width: "",
+        height: "",
+        alt: "Плоттер Jinka JK-1351 PE"
+      },
+    },
+    {
+      name: "Rabbit HX 1360N",
+      price: "39 300р.",
+      img: {
+        src: "rabbit_hx_1360n.webp",
+        width: "",
+        height: "",
+        alt: "Плоттер Rabbit HX 1360N"
+      },
+    },
+    {
+      name: "Rabbit HX 1360K3",
+      price: "50 000р.",
+      img: {
+        src: "rabbit_hx_1360k3.jpg",
+        width: "",
+        height: "",
+        alt: "Плоттер Rabbit HX 1360K3"
+      },
+    },
+    {
+      name: "Rabbit HX 1780K3",
+      price: "",
+      img: {
+        src: "rabbit_hx_1780k3.jpg",
+        width: "",
+        height: "",
+        alt: "Плоттер Rabbit HX 1780K3"
+      },
+    },
+     {
+      name: "Jinka XL-1101",
+      price: "28 500р.",
+      img: {
+        src: "jinka_xl-1101.jpg",
+        width: "",
+        height: "",
+        alt: "Плоттер Jinka XL-1101"
+      },
+    },
+    {
+      name: "Jinka XL-1661",
+      price: "51 500р.",
+      img: {
+        src: "jinka_xl-1661.jpg",
+        width: "",
+        height: "",
+        alt: "Плоттер Jinka XL-1661"
+      },
+    },
+    {
+      name: "Термопресс THJ-38",
+      price: "22 600р.",
+      img: {
+        src: "thj-38.jpg",
+        width: "",
+        height: "",
+        alt: "Термопресс THJ-38"
+      },
+    },
+    {
+      name: "Термопресс THJ-45",
+      price: "32 500р.",
+      img: {
+        src: "thj-45.jpg",
+        width: "",
+        height: "",
+        alt: "Термопресс THJ-45"
+      },
+    },
+  ];
+
+mixin catalog(className)
+  section(class=className id="catalog")
+    p.catalog__title= "Надежные и недорогие в обслуживании режущие плоттеры и термопрессы, с гарантией"
+    ul.catalog__plotters
+      each plotter in catalogPlotters
+        li.catalog__plotter
+          +plotter-card("catalog__plotter-card plotter-card", plotter)

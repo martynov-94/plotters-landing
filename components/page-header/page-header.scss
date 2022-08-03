@@ -2,14 +2,34 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   
   text-align: center;
+  background-color: #d4cac5;
+  // background-color: black;
 
-//   @media screen and (min-width: $breakpoint-medium) {
-//     flex-direction: row;
-//     justify-content: space-between;
-//   }
+  @media (min-width: $breakpoint-medium) {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    position: sticky;
+    top: 0;
+    
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    height: 100vh;
+    grid-column: 1;
+    grid-row: 1/4;
+
+    border-right: 1px solid gray;
+    overflow: hidden;
+  }
 
   &__logo {
     position: relative;
@@ -28,6 +48,14 @@
     //   margin-left: 18px;
     // }
 
+    @media (min-width: $breakpoint-medium) {
+      justify-self: center;
+    }
+
+    @media (min-width: $breakpoint-large) {
+      // justify-self: center;
+    }
+
     &:before {
       position: absolute;
       content: "";
@@ -42,6 +70,10 @@
       border-bottom: 30px solid #544943; 
       border-right: 17px solid #544943; 
       border-left: 17px solid transparent; 
+
+      @media (min-width: $breakpoint-large) {
+        display: none;
+      }
     }
 
     &:after {
@@ -57,7 +89,11 @@
       border-top: 30px solid #544943; 
       border-bottom: 30px solid #544943; 
       border-left: 17px solid #544943; 
-      border-right: 17px solid transparent; 
+      border-right: 17px solid transparent;
+      
+      @media (min-width: $breakpoint-large) {
+        display: none;
+      }
     }
   }
 
@@ -68,7 +104,6 @@
     font-weight: bold;
     text-transform: uppercase;
   }
-
 
   &__description {
     font-size: 0.9rem;
@@ -82,6 +117,17 @@
 
     background-color: #dddddd;
     border: 1px solid rgb(131, 131, 131);
+
+    @media (min-width: $breakpoint-medium) {
+      display: grid;
+      grid-column: 1 / -1;
+      justify-self: center;
+    }
+
+    @media (min-width: $breakpoint-large) {
+      display: flex;
+      
+    }
   }
 
   &__contact-block {
@@ -94,6 +140,14 @@
 
     &:not(:last-child) {
       border-bottom: 1px dashed gray;
+
+      @media (min-width: $breakpoint-medium) {
+        border-right: 1px dashed gray;
+      }
+    }
+
+    @media (min-width: $breakpoint-medium) {
+      grid-row: 1;
     }
   }
 
@@ -104,21 +158,20 @@
     padding-bottom: 5px;
 
     background-color: #c7c4c4;
+
+    @media (min-width: $breakpoint-medium) {
+      grid-column: 1 / 3;
+      grid-row: 2;
+      align-self: stretch;
+    }
   }
 
   &__order-btn {
-    padding: 20px 40px;
-
-    font-family: $font-default;
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
-    text-shadow: #413f35 2px 2px;
-
-    background-image: linear-gradient(to right, rgb(111, 0, 255), rgb(158, 55, 255));
-    border: 1px solid rgb(111, 0, 255);
-    border-radius: 10px;
+    @media (min-width: $breakpoint-medium) {
+      grid-column: 1 / -1;
+      justify-self: center;
+    }
+    
   }
 
   &__menu-container {
@@ -127,22 +180,43 @@
     display: flex;
     width: 100vw;
     margin-bottom: 15px;
+
+    @media (min-width: $breakpoint-medium) {
+      position: unset;
+
+      align-self: end;
+      width: auto;
+    }
+
+    @media (min-width: $breakpoint-large) {
+      align-self: stretch
+    }
   }
 
   &__main-menu {
     position: absolute;
     top: calc(23px + 1.6rem);
     left: 0;
+    z-index: 3;
 
     transform-origin: top;
     transform: scaleY(0);
     transition: transform 0.25s;
+
+    @media (min-width: $breakpoint-medium) {
+      top: 97px;
+    }
+
+    @media (min-width: $breakpoint-large) {
+      position: initial;
+
+      transform: unset;
+      transition: unset;
+    }
   }
 }
 
 .menu-btn {
-  // position: relative;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -159,39 +233,9 @@
   &__icon {
     margin-left: 30px;
   }
-}
 
-.main-menu {
-  width: 100%;
-
-  &__list {
-  }
-
-  &__item {
-    padding: 8px 15px;
-    padding-left: 15px;
-
-    font-size: 1rem;
-    text-align: left;
-
-    background-color: #e7eff3;
-    border-bottom: 1px solid gray;
-
-    &:first-of-type {
-      border-top: 1px solid black;
-    }
-
-    &:last-of-type {
-      border-color: black;
-    }
-
-    &:hover {
-      background-color: gray;
-      color: white;
-
-      cursor: pointer;
-    }
-
-    transition: all 0.1s;
+  @media (min-width: $breakpoint-large) {
+    display: none;
   }
 }
+

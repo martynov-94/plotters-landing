@@ -1,0 +1,9 @@
+-
+  const IMG_PATH = "img/plotters/";
+
+mixin plotter-card(className, plotterData)
+  div(class=className)
+    img.plotter-card__pic(src=IMG_PATH + plotterData.img.src width=plotterData.img.width height=plotterData.img.height alt=plotterData.img.alt)
+    h2.plotter-card__name= plotterData.name
+    p.plotter-card__price= plotterData.price
+    button.plotter-card__more-btn.btn.btn_small= "Подробнее"
