@@ -26,7 +26,12 @@ const popupCloseButton = getEl('.popup-window__close-btn');
 
 moreBtn.forEach(btn => {
   btn.onclick = e => {
-    console.log(popupWindow)
+    const goodsToDisplay = goods.find(item => item.id === e.target.parentElement.dataset.id) || {};
+    console.log(goodsToDisplay);  
+
+    const popupTitle = getEl(".popup-window__goods-title");
+    popupTitle.textContent = goodsToDisplay.name;
+
     popupWindow.classList.remove("visually-hidden");
   }
 });
@@ -45,14 +50,4 @@ document.onkeydown = (evt) => {
   if (evt.key == "Escape") popupWindow.classList.add("visually-hidden");
 }
 
-
-
-
-
-
-const goodsData = [
-  {
-    id: "1",
-    name: "Jinka JK-365 PE",
-  }
-]
+// console.log(goodsData)

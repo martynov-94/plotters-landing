@@ -410,8 +410,8 @@ button:focus {
   color: white;
   text-transform: uppercase;
   text-shadow: #413f35 2px 2px;
-  background-image: linear-gradient(to right, #6f00ff, #9e37ff);
-  border: 1px solid #6f00ff;
+  background-image: linear-gradient(to right, rgb(111, 0, 255), rgb(158, 55, 255));
+  border: 1px solid rgb(111, 0, 255);
   border-radius: 10px;
   transition: background-image 1s;
 }
@@ -420,7 +420,7 @@ button:focus {
   font-size: 1.4rem;
 }
 .btn:hover {
-  background-image: linear-gradient(to left, #6f00ff, #9e37ff);
+  background-image: linear-gradient(to left, rgb(111, 0, 255), rgb(158, 55, 255));
 }
 
 .page-header {
@@ -531,7 +531,7 @@ button:focus {
   flex-direction: column;
   margin-bottom: 20px;
   background-color: #dddddd;
-  border: 1px solid #838383;
+  border: 1px solid rgb(131, 131, 131);
 }
 @media (min-width: 38em) {
   .page-header__contact-btns {
@@ -550,7 +550,7 @@ button:focus {
   font-size: 1.4rem;
   font-weight: 600;
   text-decoration: none;
-  color: #113655;
+  color: rgb(17, 54, 85);
 }
 .page-header__contact-block:not(:last-child) {
   border-bottom: 1px dashed gray;
@@ -810,7 +810,7 @@ button:focus {
   margin-bottom: 12px;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #544943;
+  color: rgb(84, 73, 67);
 }
 @media (min-width: 60em) {
   .plotter-card__more-btn {
@@ -852,7 +852,7 @@ button:focus {
   padding: 5px;
   border: none;
   background: none;
-  transition: all 0.1s linear;
+  transition: all 0.5s linear;
   cursor: pointer;
 }
 .popup-window__close-btn::before {
