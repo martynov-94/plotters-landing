@@ -1,10 +1,13 @@
-const menuBtn = document.querySelector(".menu-btn");
-const menu = document.querySelector(".main-menu");
-const menuBtnIcon = document.querySelector(".menu-btn");
-const description = document.querySelector(".description");
-const descriptionBackdrop = document.querySelector(".description__backdrop");
+const getEl = selector => document.querySelector(selector);
 
-console.log(description.offsetHeight);
+const menuBtn = getEl(".menu-btn");
+const menu = getEl(".main-menu");
+const menuBtnIcon = getEl(".menu-btn");
+const description = getEl(".description");
+const descriptionBackdrop = getEl(".description__backdrop");
+const moreBtn = document.querySelectorAll(".plotter-card__more-btn");
+
+
 descriptionBackdrop.style.height = description.offsetHeight + "px";
 
 menuBtn.onclick = () => {
@@ -14,6 +17,42 @@ menuBtn.onclick = () => {
   menu.style.transform = `scaleY(${+menu.classList.contains(classToAdd)})`;
 };
 
-
 window.onresize = () => descriptionBackdrop.style.height = description.offsetHeight + "px";
 
+
+const popupWindow = getEl(".popup-window");
+const popupContent = getEl('.popup-window__content');
+const popupCloseButton = getEl('.popup-window__close-btn');
+
+moreBtn.forEach(btn => {
+  btn.onclick = e => {
+    console.log(popupWindow)
+    popupWindow.classList.remove("visually-hidden");
+  }
+});
+
+popupWindow.onclick = (e) => {
+  if (!popupContent.contains(e.target) || e.target.tagName == "A") {
+    popupWindow.classList.add("visually-hidden");
+  }
+};
+
+popupCloseButton.onclick = () => {
+  popupWindow.classList.add("visually-hidden");
+};
+
+document.onkeydown = (evt) => {
+  if (evt.key == "Escape") popupWindow.classList.add("visually-hidden");
+}
+
+
+
+
+
+
+const goodsData = [
+  {
+    id: "1",
+    name: "Jinka JK-365 PE",
+  }
+]

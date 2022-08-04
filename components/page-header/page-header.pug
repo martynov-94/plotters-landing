@@ -1,8 +1,9 @@
 mixin page-header(className)
   header(class=className id="page-header")
-    section.page-header__logo
-      h2.page-header__title= "CPU-Plotters"
-      p.page-header__description= "(плоттеры и комплектующие)"
+    a.page-header__home-link(href="#")
+      section.page-header__logo
+        h2.page-header__title= "CPU-Plotters"
+        p.page-header__description= "(плоттеры и комплектующие)"
     .page-header__menu-container
       button.page-header__menu-btn.menu-btn= "Меню" 
         img.menu-btn__icon(src="components/page-header/img/hamburger-icon.png" width="30" height="30" alt="Кнопка меню")

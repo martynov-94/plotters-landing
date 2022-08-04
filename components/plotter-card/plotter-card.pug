@@ -2,7 +2,7 @@
   const IMG_PATH = "img/plotters/";
 
 mixin plotter-card(className, plotterData)
-  div(class=className)
+  div(class=className id=plotterData.id data-id=plotterData.dbID)
     img.plotter-card__pic(src=IMG_PATH + plotterData.img.src width=plotterData.img.width height=plotterData.img.height alt=plotterData.img.alt)
     h2.plotter-card__name= plotterData.name
     p.plotter-card__price= plotterData.price

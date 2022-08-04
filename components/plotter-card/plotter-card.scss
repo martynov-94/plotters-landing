@@ -10,12 +10,22 @@
   background-color: white;
   border-radius: 10px;
 
+  @media (min-width: $breakpoint-large) {
+    width: 100%;
+  }
+
   &__pic {
     display: block;
     max-width: 100%;
     margin-bottom: 15px;
     
     object-fit: contain;
+
+    @media (min-width: $breakpoint-large) {
+      height: 200px;
+
+      object-fit: cover;
+    }
   }
 
   &__name {
@@ -31,5 +41,11 @@
     font-size: 1.5rem;
     font-weight: bold;
     color: rgb(84, 73, 67);
+  }
+
+  &__more-btn {
+    @media (min-width: $breakpoint-large) {
+      margin-top: auto;
+    }
   }
 }

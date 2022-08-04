@@ -1,16 +1,31 @@
 -
   const mainMenuItems = [
-    "Режущие плоттеры",
-    "Термопрессы",
-    "Комплектующие",
-    "Доставка и оплата",
-    "Контакты",
-    "Реквизиты",
-    "Драйверы"
+    {
+      text: "Плоттеры Jinka PE",
+      link: "#plotters-jinka-pe"
+    },
+    {
+      text: "Плоттеры Rabbit N",
+      link: "#plotters-rabbit-n"
+    },
+    {
+      text: "Плоттеры Rabbit K",
+      link: "#plotters-rabbit-k"
+    },
+    {
+      text: "Плоттеры Jinka XL",
+      link: "#plotters-jinka-xl"
+    },
+    {
+      text: "Термопрессы",
+      link: "#heat-presses"
+    },
   ]
 
 mixin main-menu(className)
   nav(class=className id="main-menu")
     ul.main-menu__list
       each item in mainMenuItems
-        li.main-menu__item= item
+        a.main-menu__item(href=item.link)
+          li= item.text
+          

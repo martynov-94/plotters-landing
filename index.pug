@@ -14,8 +14,10 @@ html(lang="ru")
   
   body
     .wrapper
+      +popup-window("popup-window visually-hidden")
       +page-header("page-header")
       +description("description")
       +catalog("catalog")
 
+    script(src="goods.js")
     script(src="script.js")
