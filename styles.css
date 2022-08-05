@@ -410,8 +410,8 @@ button:focus {
   color: white;
   text-transform: uppercase;
   text-shadow: #413f35 2px 2px;
-  background-image: linear-gradient(to right, rgb(111, 0, 255), rgb(158, 55, 255));
-  border: 1px solid rgb(111, 0, 255);
+  background-image: linear-gradient(to right, #6f00ff, #9e37ff);
+  border: 1px solid #6f00ff;
   border-radius: 10px;
   transition: background-image 1s;
 }
@@ -420,7 +420,7 @@ button:focus {
   font-size: 1.4rem;
 }
 .btn:hover {
-  background-image: linear-gradient(to left, rgb(111, 0, 255), rgb(158, 55, 255));
+  background-image: linear-gradient(to left, #6f00ff, #9e37ff);
 }
 
 .page-header {
@@ -531,7 +531,7 @@ button:focus {
   flex-direction: column;
   margin-bottom: 20px;
   background-color: #dddddd;
-  border: 1px solid rgb(131, 131, 131);
+  border: 1px solid #838383;
 }
 @media (min-width: 38em) {
   .page-header__contact-btns {
@@ -550,7 +550,7 @@ button:focus {
   font-size: 1.4rem;
   font-weight: 600;
   text-decoration: none;
-  color: rgb(17, 54, 85);
+  color: #113655;
 }
 .page-header__contact-block:not(:last-child) {
   border-bottom: 1px dashed gray;
@@ -742,6 +742,7 @@ button:focus {
   padding: 8px 15px;
   padding-left: 15px;
   font-size: 1rem;
+  font-family: "Roboto Slab", serif;
   line-height: 1.2;
   text-align: left;
   text-decoration: none;
@@ -810,7 +811,7 @@ button:focus {
   margin-bottom: 12px;
   font-size: 1.5rem;
   font-weight: bold;
-  color: rgb(84, 73, 67);
+  color: #544943;
 }
 @media (min-width: 60em) {
   .plotter-card__more-btn {
@@ -877,4 +878,27 @@ button:focus {
 }
 .popup-window__close-btn::hover {
   opacity: 0.75;
+}
+.popup-window__title {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  text-align: center;
+}
+.popup-window__specs {
+  font-size: 1.3rem;
+}
+.popup-window__specs tr:nth-of-type(odd) {
+  background-color: #d4cac5;
+}
+.popup-window__specs td {
+  padding: 7px 10px;
+  vertical-align: middle;
+  border: 1px solid black;
+}
+.popup-window__stub-text {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  text-align: center;
 }

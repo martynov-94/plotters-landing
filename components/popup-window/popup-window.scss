@@ -77,4 +77,37 @@
       opacity: 0.75;
     }
   }
+
+  &__title {
+    margin-bottom: 20px;
+
+    font-size: 2rem;
+    font-family: "Roboto Slab", serif;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__specs {
+    font-size: 1.3rem;
+
+    & tr {
+      &:nth-of-type(odd) {
+        background-color: #d4cac5;
+      }
+    }
+
+    & td {
+      padding: 7px 10px; 
+
+      vertical-align: middle;
+      border: 1px solid black;
+    }
+  }
+
+  &__stub-text {
+    margin-top: 20px;
+
+    font-size: 1.4rem;
+    text-align: center;
+  }
 }
