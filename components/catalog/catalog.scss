@@ -1,27 +1,21 @@
 .catalog {
   padding: 20px 4vw;
 
+  background-color: #d4cac5;
+  background: linear-gradient(to right, #d4cac5, #caafa5);
+
   @media (min-width: $breakpoint-large) {
     position: relative;
     z-index: 2;
 
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
     grid-column: 2;
-
-    background-color: #d4cac5;
   }
 
   &__title {
     margin-bottom: 15px;
 
     font-size: 1.5rem;
-    // font-weight: bold;
     text-align: center;
-
-    // @media (min-width: $breakpoint-large) {
-    //   grid-column: 1 / -1;
-    // }
   }
 
   &__plotters {

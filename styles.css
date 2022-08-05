@@ -372,6 +372,7 @@ body {
   padding: 0;
   font-family: "Exo 2", sans-serif;
   background-color: #d4cac5;
+  background-image: linear-gradient(to right, #d4cac5, #ecdfd8);
   overflow-x: hidden;
 }
 
@@ -672,9 +673,9 @@ button:focus {
   position: absolute;
   z-index: 1;
   width: 100%;
-  background: no-repeat url(../components/description/img/hero_image_2.jpg);
+  background: no-repeat url(components/description/img/hero_image.jpg);
   background-size: cover;
-  filter: brightness(0.5) contrast(0.5);
+  filter: brightness(0.8) contrast(0.5);
 }
 .description__products-types {
   display: flex;
@@ -686,7 +687,7 @@ button:focus {
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
-  text-shadow: 2px 2px 6px black;
+  text-shadow: 2px 2px 1px black;
   filter: unset;
 }
 .description__points {
@@ -707,13 +708,14 @@ button:focus {
 
 .catalog {
   padding: 20px 4vw;
+  background-color: #d4cac5;
+  background: linear-gradient(to right, #d4cac5, #caafa5);
 }
 @media (min-width: 60em) {
   .catalog {
     position: relative;
     z-index: 2;
     grid-column: 2;
-    background-color: #d4cac5;
   }
 }
 .catalog__title {
