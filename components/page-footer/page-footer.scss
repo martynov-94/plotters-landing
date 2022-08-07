@@ -1,0 +1,97 @@
+.page-footer {
+  padding: 20px 5vw 0;
+  // color: #dddddd;
+
+  // background-color: rgb(41, 38, 70);
+
+  @media (min-width: $breakpoint-medium) {
+    grid-column: 2;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  } 
+
+  & label {
+    display: block;
+  }
+
+  &__phones,
+  &__emails,
+  &__working-hours,
+  &__feedback {
+    margin-bottom: 20px;
+  }
+
+  &__phones,
+  &__emails,
+  &__working-hours {
+    grid-column: 1;
+  }
+
+  &__feedback {
+    grid-row: 1 / 4;
+    grid-column: 2;
+  }
+
+  &__phones-title,
+  &__emails-title,
+  &__working-hours-title,
+  &__feedback-title, {
+    margin-bottom: 8px;
+
+    font-size: 1.8rem;
+  }
+
+  &__phones-list,
+  &__emails-list,
+  &__working-hours-info,
+  &__form {
+
+    @media (min-width: $breakpoint-large) {
+      padding-left: 20px;
+    } 
+  }
+
+  &__phone,
+  &__email {
+    font-size: 1.2rem;
+
+    &:not(:last-of-type) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__additional-info {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    justify-items: end;
+    gap: 10px;
+    margin-right: -5vw;
+    margin-left: -5vw;
+    padding: 20px 5vw;
+    
+    background-color: #b7b7b7;
+
+    @media (min-width: $breakpoint-medium) {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+  }
+
+  &__years {
+    @media (min-width: $breakpoint-medium) {
+      margin-left: auto;
+    }
+  }
+
+  &__homepage-link {
+    grid-column: span 2;
+
+    @media (min-width: $breakpoint-medium) {
+      margin-left: 15px;
+    }
+  }
+}

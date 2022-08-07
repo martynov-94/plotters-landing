@@ -1,0 +1,16 @@
+-
+  const shipmentCompanies = [
+    "ПЭК",
+    "СДЭК",
+    "Деловые Линии",
+    "Энергия",
+    "ТК Кашалот",
+  ]
+
+mixin shipment(className)
+  section(class=className)
+    h2.shipment__title Доставка и оплата
+    p.shipment__info Мы отправляем товары по России в соответствии со сроками и тарифами следующими транспортными компаниями:
+    ul.shipment__companies
+      each company in shipmentCompanies
+        li.shipment__company= company

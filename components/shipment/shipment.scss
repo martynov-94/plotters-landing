@@ -1,0 +1,62 @@
+.shipment {
+  padding: 36px 4vw;
+
+  color: white;
+  // background: linear-gradient(to right, #d4cac5, #caafa5);
+  background: url(components/shipment/img/shipment_truck.jpg) no-repeat 100% 100%;
+  background-size: cover;
+
+  text-shadow: -1px -1px 2px black, 
+                2px 2px 2px black;
+
+  @media (min-width: $breakpoint-large) {
+    grid-column: 2;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+
+    font-size: 2rem;
+    font-family: "Roboto Slab", serif;
+    font-weight: bold;
+    text-align: center;
+
+    @media (min-width: $breakpoint-large) {
+      margin-bottom: 34px;
+    }
+  }
+
+  &__info {
+    margin-bottom: 25px;
+
+    font-size: 1.2rem;
+    text-shadow: 4px 4px 20px black, 
+                -4px -4px 20px black, 
+                -4px 4px 20px black, 
+                4px -4px 20px black;
+
+    @media (min-width: $breakpoint-large) {
+      margin-bottom: 22px;
+
+      font-size: 1.6rem;
+    }
+  }
+
+  &__companies {
+    margin-left: 36px;
+
+    font-size: 1.1rem;
+
+    list-style-type: unset;
+
+    @media (min-width: $breakpoint-large) {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__company {
+    padding: 5px;
+
+    font-weight: bold;
+  }
+}

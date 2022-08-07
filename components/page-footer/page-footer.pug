@@ -1,0 +1,41 @@
+-
+  const footerPhones = [
+    "8 (962) 202-10-66",
+    "8 (915) 991-65-53"
+  ];
+  const footerEmails = [
+    "vitalj.vg@yandex.ru"
+  ]
+
+mixin page-footer(className)
+  footer(class=className id="page-footer")
+    section.page-footer__phones
+      h2.page-footer__phones-title 📞 Телефоны:
+      ul.page-footer__phones-list 
+        each phone in footerPhones
+          li.page-footer__phone= phone
+    section.page-footer__emails
+      h2.page-footer__emails-title 📧 E-Mail:
+      ul.page-footer__emails-list 
+        each email in footerEmails
+          li.page-footer__email
+            a(href="mailto:"+email)= email 
+    section.page-footer__working-hours
+      h2.page-footer__working-hours-title 🕒 График работы:
+      p.page-footer__working-hours-info Пн-Вс 9:00-18:00
+    section.page-footer__feedback
+      h2.page-footer__feedback-title ❓ Остались вопросы? Напишите нам!
+      form.page-footer__form(action="" method="get")
+        .page-footer__name-block
+          label.page-footer__input-label(for="page-footer__input-name")= "Имя:"
+          input.page-footer__input(type="text" name="name" id="page-footer__input-name")
+        .page-footer__phone-block
+          label.page-footer__input-label(for="page-footer__input-phone")= "Телефон:"
+          input.page-footer__input(type="tel" name="phone" id="page-footer__input-phone")
+        .page-footer__message-block
+          label.page-footer__textarea-label(for="page-footer__message-area")= "Сообщение:"
+          textarea.page-footer__textarea(name="message" cols="30" rows="10" id="page-footer__message-area")
+    section.page-footer__additional-info
+      span.page-footer__author Виталий М.
+      span.page-footer__years ⚓ 2014-2022
+      a.page-footer__homepage-link(href="cpu-plotters.ru") cpu-plotters.ru

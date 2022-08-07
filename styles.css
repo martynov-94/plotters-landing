@@ -372,7 +372,6 @@ body {
   padding: 0;
   font-family: "Exo 2", sans-serif;
   background-color: #d4cac5;
-  background-image: linear-gradient(to right, #d4cac5, #ecdfd8);
   overflow-x: hidden;
 }
 
@@ -639,7 +638,7 @@ button:focus {
   margin: 0 auto;
   padding: 8px 20px;
   font-size: 1.6rem;
-  font-family: "Exo 2", sans-serif;
+  font-family: "Roboto Slab", serif;
   background-color: #e7eff3;
   border: 1px solid gray;
   border-radius: 5px;
@@ -708,7 +707,6 @@ button:focus {
 
 .catalog {
   padding: 20px 4vw;
-  background-color: #d4cac5;
   background: linear-gradient(to right, #d4cac5, #caafa5);
 }
 @media (min-width: 60em) {
@@ -903,4 +901,123 @@ button:focus {
   margin-top: 20px;
   font-size: 1.4rem;
   text-align: center;
+}
+
+.shipment {
+  padding: 36px 4vw;
+  color: white;
+  background: url(components/shipment/img/shipment_truck.jpg) no-repeat 100% 100%;
+  background-size: cover;
+  text-shadow: -1px -1px 2px black, 2px 2px 2px black;
+}
+@media (min-width: 60em) {
+  .shipment {
+    grid-column: 2;
+  }
+}
+.shipment__title {
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  text-align: center;
+}
+@media (min-width: 60em) {
+  .shipment__title {
+    margin-bottom: 34px;
+  }
+}
+.shipment__info {
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+  text-shadow: 4px 4px 20px black, -4px -4px 20px black, -4px 4px 20px black, 4px -4px 20px black;
+}
+@media (min-width: 60em) {
+  .shipment__info {
+    margin-bottom: 22px;
+    font-size: 1.6rem;
+  }
+}
+.shipment__companies {
+  margin-left: 36px;
+  font-size: 1.1rem;
+  list-style-type: unset;
+}
+@media (min-width: 60em) {
+  .shipment__companies {
+    font-size: 1.3rem;
+  }
+}
+.shipment__company {
+  padding: 5px;
+  font-weight: bold;
+}
+
+.page-footer {
+  padding: 20px 5vw 0;
+}
+@media (min-width: 38em) {
+  .page-footer {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.page-footer label {
+  display: block;
+}
+.page-footer__phones, .page-footer__emails, .page-footer__working-hours, .page-footer__feedback {
+  margin-bottom: 20px;
+}
+.page-footer__phones, .page-footer__emails, .page-footer__working-hours {
+  grid-column: 1;
+}
+.page-footer__feedback {
+  grid-row: 1/4;
+  grid-column: 2;
+}
+.page-footer__phones-title, .page-footer__emails-title, .page-footer__working-hours-title, .page-footer__feedback-title {
+  margin-bottom: 8px;
+  font-size: 1.8rem;
+}
+@media (min-width: 60em) {
+  .page-footer__phones-list, .page-footer__emails-list, .page-footer__working-hours-info, .page-footer__form {
+    padding-left: 20px;
+  }
+}
+.page-footer__phone, .page-footer__email {
+  font-size: 1.2rem;
+}
+.page-footer__phone:not(:last-of-type), .page-footer__email:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+.page-footer__additional-info {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  justify-items: end;
+  gap: 10px;
+  margin-right: -5vw;
+  margin-left: -5vw;
+  padding: 20px 5vw;
+  background-color: #b7b7b7;
+}
+@media (min-width: 38em) {
+  .page-footer__additional-info {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 38em) {
+  .page-footer__years {
+    margin-left: auto;
+  }
+}
+.page-footer__homepage-link {
+  grid-column: span 2;
+}
+@media (min-width: 38em) {
+  .page-footer__homepage-link {
+    margin-left: 15px;
+  }
 }

@@ -17,7 +17,7 @@ body {
   font-family: 'Exo 2', sans-serif;
 
   background-color: #d4cac5;
-  background-image: linear-gradient(to right, #d4cac5, #ecdfd8);
+  // background: linear-gradient(to right, #d4cac5, #caafa5);
   overflow-x: hidden;
 }
 
@@ -39,6 +39,7 @@ button:focus {
   // padding: 20px 5vw 0;
 
   background-color: #d4cac5;
+  // background: linear-gradient(to right, #d4cac5, #caafa5);
 
   @media (min-width: $breakpoint-large) {
     display: grid;
