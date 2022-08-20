@@ -991,6 +991,12 @@ button:focus {
 .page-footer__phone:not(:last-of-type), .page-footer__email:not(:last-of-type) {
   margin-bottom: 8px;
 }
+.page-footer__input-label, .page-footer__textarea-label {
+  margin-bottom: 3px;
+}
+.page-footer__input, .page-footer__textarea {
+  margin-bottom: 14px;
+}
 .page-footer__additional-info {
   grid-column: 1/-1;
   display: grid;

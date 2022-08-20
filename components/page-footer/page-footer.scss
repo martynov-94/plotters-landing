@@ -61,6 +61,16 @@
     }
   }
 
+  &__input-label,
+  &__textarea-label {
+    margin-bottom: 3px;
+  }
+
+  &__input,
+  &__textarea {
+    margin-bottom: 14px;
+  }
+
   &__additional-info {
     grid-column: 1 / -1;
 

@@ -1,9 +1,6 @@
 .main-menu {
   width: 100%;
 
-  @media (min-width: $breakpoint-large) {
-  }
-
   &__item {
     display: block;
     padding: 8px 15px;
