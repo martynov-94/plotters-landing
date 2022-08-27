@@ -819,7 +819,7 @@ button:focus {
   }
 }
 
-.popup-window {
+.specs-popup-window {
   position: fixed;
   z-index: 100;
   top: 0;
@@ -834,7 +834,7 @@ button:focus {
   background-color: rgba(0, 0, 0, 0.7);
   transition: all 0.5s linear;
 }
-.popup-window__content {
+.specs-popup-window__content {
   position: relative;
   width: 90vw;
   max-width: 700px;
@@ -844,7 +844,7 @@ button:focus {
   background-color: white;
   overflow-y: auto;
 }
-.popup-window__close-btn {
+.specs-popup-window__close-btn {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -856,7 +856,7 @@ button:focus {
   transition: all 0.5s linear;
   cursor: pointer;
 }
-.popup-window__close-btn::before {
+.specs-popup-window__close-btn::before {
   position: absolute;
   content: "";
   top: 50%;
@@ -866,7 +866,7 @@ button:focus {
   background-color: black;
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-.popup-window__close-btn::after {
+.specs-popup-window__close-btn::after {
   position: absolute;
   content: "";
   top: 50%;
@@ -876,31 +876,143 @@ button:focus {
   background-color: black;
   transform: translate(-50%, -50%) rotate(45deg);
 }
-.popup-window__close-btn::hover {
+.specs-popup-window__close-btn::hover {
   opacity: 0.75;
 }
-.popup-window__title {
+.specs-popup-window__title {
   margin-bottom: 20px;
   font-size: 2rem;
   font-family: "Roboto Slab", serif;
   font-weight: bold;
   text-align: center;
 }
-.popup-window__specs {
+.specs-popup-window__specs {
   font-size: 1.3rem;
 }
-.popup-window__specs tr:nth-of-type(odd) {
+.specs-popup-window__specs tr:nth-of-type(odd) {
   background-color: #d4cac5;
 }
-.popup-window__specs td {
+.specs-popup-window__specs td {
   padding: 7px 10px;
   vertical-align: middle;
   border: 1px solid black;
 }
-.popup-window__stub-text {
+.specs-popup-window__stub-text {
   margin-top: 20px;
   font-size: 1.4rem;
   text-align: center;
+}
+
+.order-popup-window {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.5s linear;
+}
+.order-popup-window__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  max-width: 700px;
+  min-height: 200px;
+  max-height: 90vh;
+  padding: 48px;
+  background-color: white;
+  border: 8px solid #5e4773;
+  overflow-y: auto;
+}
+.order-popup-window__close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border: none;
+  background: none;
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+.order-popup-window__close-btn::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 3px;
+  background-color: black;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.order-popup-window__close-btn::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 3px;
+  background-color: black;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.order-popup-window__close-btn::hover {
+  opacity: 0.75;
+}
+.order-popup-window__title {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+.order-popup-window__picture {
+  width: 85%;
+  margin-bottom: 30px;
+  border-radius: 25px;
+}
+.order-popup-window__text {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+@media (min-width: 38em) {
+  .order-popup-window__form {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.order-popup-window__name-block, .order-popup-window__phone-block, .order-popup-window__message-block, .order-popup-window__select-menu {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.order-popup-window__name-block {
+  grid-column: 1;
+}
+.order-popup-window__phone-block {
+  grid-column: 2;
+}
+.order-popup-window__message-block, .order-popup-window__select-menu, .order-popup-window__submit-btn {
+  grid-column: 1/-1;
+}
+.order-popup-window__input-label, .order-popup-window__textarea-label {
+  margin-bottom: 3px;
+}
+.order-popup-window__select {
+  font-size: 1rem;
+  font-family: "Exo 2", sans-serif;
+}
+.order-popup-window__submit-btn {
+  width: 100%;
 }
 
 .shipment {

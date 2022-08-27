@@ -1,19 +1,17 @@
 const getEl = selector => document.querySelector(selector);
 
-const menuBtn = getEl(".menu-btn");
-const menu = getEl(".main-menu");
-const menuBtnIcon = getEl(".menu-btn");
-const orderBtn = getEl(".page-header__order-btn");
-const description = getEl(".description");
-const descriptionBackdrop = getEl(".description__backdrop");
-const moreBtn = document.querySelectorAll(".plotter-card__more-btn");
-
 
 // настройка высоты главной картинки
+const descriptionBackdrop = getEl(".description__backdrop"),
+      description = getEl(".description");
+
 descriptionBackdrop.style.height = description.offsetHeight + "px";
 
 
 // открытие меню
+const menuBtn = getEl(".menu-btn"),
+      menu = getEl(".main-menu");
+
 menuBtn.onclick = () => {
   const classToAdd = "main-menu_open";
 
@@ -25,20 +23,21 @@ window.onresize = () => descriptionBackdrop.style.height = description.offsetHei
 
 
 // всплывающее окно с характеристиками товара
-const popupWindow = getEl(".popup-window");
-const popupContent = getEl('.popup-window__content');
-const popupCloseButton = getEl('.popup-window__close-btn');
-const popupStubText = getEl('.popup-window__stub-text');
+const specsPopupWindow = getEl(".specs-popup-window"),
+      specsPopupContent = getEl('.specs-popup-window__content'),
+      specsPopupCloseButton = getEl('.specs-popup-window__close-btn'),
+      specsPopupStubText = getEl('.specs-popup-window__stub-text'),
+      moreBtn = document.querySelectorAll(".plotter-card__more-btn");
 
 moreBtn.forEach(btn => {
   btn.onclick = e => {
     const goodsToDisplay = goods.find(item => item.id === e.target.parentElement.dataset.id) || {};
 
-    const title = getEl(".popup-window__title");
-    const specs = getEl(".popup-window__specs");
-
+    const title = getEl(".specs-popup-window__title");
+    const specs = getEl(".specs-popup-window__specs");
+    
     specs.innerHTML = "";
-    popupStubText.innerHTML = "";
+    specsPopupStubText.innerHTML = "";
 
     title.textContent = goodsToDisplay.name;
 
@@ -52,26 +51,54 @@ moreBtn.forEach(btn => {
         cellSpecValue.textContent = spec.value;
       }
     } else {
-      popupStubText.textContent = "Характеристики будут добавлены позже";
+      specsPopupStubText.textContent = "Характеристики будут добавлены позже";
     }
 
-    popupWindow.classList.remove("visually-hidden");
+    specsPopupWindow.classList.remove("visually-hidden");
   }
 });
 
-popupWindow.onclick = (e) => {
-  if (!popupContent.contains(e.target) || e.target.tagName == "A") {
-    popupWindow.classList.add("visually-hidden");
+specsPopupWindow.onclick = (e) => {
+  if (!specsPopupContent.contains(e.target) || e.target.tagName == "A") {
+    specsPopupWindow.classList.add("visually-hidden");
   }
 };
 
-popupCloseButton.onclick = () => {
-  popupWindow.classList.add("visually-hidden");
+specsPopupCloseButton.onclick = () => {
+  specsPopupWindow.classList.add("visually-hidden");
 };
 
-document.onkeydown = (evt) => {
-  if (evt.key == "Escape") popupWindow.classList.add("visually-hidden");
+
+
+
+// поведение при нажатии на кнопку "заказать" в главном меню
+const orderBtn = getEl(".page-header__order-btn"),
+      orderPopupWindow = getEl(".order-popup-window"),
+      orderPopupContent = getEl('.order-popup-window__content'),
+      orderPopupCloseButton = getEl('.order-popup-window__close-btn');
+
+orderBtn.onclick = () => {
+  orderPopupWindow.classList.remove("visually-hidden");
 }
+
+orderPopupCloseButton.onclick = () => {
+  orderPopupWindow.classList.add("visually-hidden");
+};
+
+orderPopupWindow.onclick = (e) => {
+  if (!orderPopupContent.contains(e.target) || e.target.tagName == "A") {
+    orderPopupWindow.classList.add("visually-hidden");
+  }
+};
+
+
+document.onkeydown = (evt) => {
+  if (evt.key == "Escape") {
+    specsPopupWindow.classList.add("visually-hidden");
+    orderPopupWindow.classList.add("visually-hidden");
+  }
+}
+
 
 // вызов телефона
 function callNumber() {

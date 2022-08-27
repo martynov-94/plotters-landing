@@ -1,4 +1,4 @@
-.popup-window {
+.order-popup-window {
   position: fixed;
   z-index: 100;
   top: 0;
@@ -18,6 +18,10 @@
 
   &__content {
     position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 90vw;
     max-width: 700px;
     min-height: 200px;
@@ -25,6 +29,7 @@
     padding: 48px;
 
     background-color: white;
+    border: 8px solid #5e4773;
 
     overflow-y: auto;
   }
@@ -82,32 +87,69 @@
     margin-bottom: 20px;
 
     font-size: 2rem;
-    font-family: "Roboto Slab", serif;
     font-weight: bold;
     text-align: center;
+    text-transform: uppercase;
   }
 
-  &__specs {
-    font-size: 1.3rem;
+  &__picture {
+    width: 85%;
+    margin-bottom: 30px;
 
-    & tr {
-      &:nth-of-type(odd) {
-        background-color: #d4cac5;
-      }
-    }
-
-    & td {
-      padding: 7px 10px; 
-
-      vertical-align: middle;
-      border: 1px solid black;
-    }
+    border-radius: 25px;
   }
 
-  &__stub-text {
-    margin-top: 20px;
+  &__text {
+    margin-bottom: 20px;
 
-    font-size: 1.4rem;
-    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  &__form {
+    @media (min-width: $breakpoint-medium) {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: 1fr 1fr;
+    } 
+  }
+
+  &__name-block,
+  &__phone-block,
+  &__message-block,
+  &__select-menu {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  &__name-block {
+    grid-column: 1;
+  }
+
+  &__phone-block {
+    grid-column: 2;
+  }
+
+  &__message-block,
+  &__select-menu,
+  &__submit-btn {
+    grid-column: 1 / -1;
+  }
+
+  &__input-label,
+  &__textarea-label {
+    margin-bottom: 3px;
+  }
+
+  &__select {
+    font-size: 1rem;
+    font-family: "Exo 2", sans-serif;
+  }
+
+  &__textarea {
+  }
+
+  &__submit-btn {
+    width: 100%;
   }
 }

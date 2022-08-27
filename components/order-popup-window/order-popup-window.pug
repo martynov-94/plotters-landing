@@ -1,0 +1,27 @@
+mixin order-popup-window(className)
+  section(class=className)
+    .order-popup-window__content
+      button.order-popup-window__close-btn
+      img.order-popup-window__picture(src="components/order-popup-window/img/plotter-at-work.jpg", alt="A cutting plotter doing it work")
+      h2.order-popup-window__title Оставьте заявку
+      p.order-popup-window__text Мы вам перезвоним
+      form.order-popup-window__form(action="" method="get")
+        .order-popup-window__name-block
+          label.order-popup-window__input-label(for="order-popup-window__input-name") Имя:
+          input.order-popup-window__input(type="text" name="name" id="order-popup-window__input-name")
+        .order-popup-window__phone-block
+          label.order-popup-window__input-label(for="order-popup-window__input-phone") * Телефон:
+          input.order-popup-window__input(type="tel" name="phone" id="order-popup-window__input-phone" required)
+        .order-popup-window__select-menu
+          label.order-popup-window__input-label(for="order-popup-window__select") Заявка:
+          select.order-popup-window__select(name="topic" id="order-popup-window__select")
+            option.order-popup-window__select-option(value="jinka-pe") Купить Jinka PE
+            option.order-popup-window__select-option(value="rabbit-n") Купить Rabbit N
+            option.order-popup-window__select-option(value="rabbit-n") Купить Rabbit K
+            option.order-popup-window__select-option(value="rabbit-n") Купить Jinka XL
+            option.order-popup-window__select-option(value="rabbit-n") Купить Термопресс
+            option.order-popup-window__select-option(value="consult") Получить консультацию
+        .order-popup-window__message-block
+          label.order-popup-window__textarea-label(for="order-popup-window__message-area") Сообщение:
+          textarea.order-popup-window__textarea(name="message" cols="30" rows="5" id="order-popup-window__message-area")
+        button.order-popup-window__submit-btn.btn.btn_small(type="submit") Отправить

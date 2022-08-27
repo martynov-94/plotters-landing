@@ -1,0 +1,113 @@
+.specs-popup-window {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+
+  background-color: rgba(0, 0, 0, 0.7);
+
+  transition: all 0.5s linear;
+
+  &__content {
+    position: relative;
+    width: 90vw;
+    max-width: 700px;
+    min-height: 200px;
+    max-height: 90vh;
+    padding: 48px;
+
+    background-color: white;
+
+    overflow-y: auto;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+  
+    border: none;
+    background: none;
+  
+    transition: all 0.5s linear;
+  
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+
+      width: 20px;
+      height: 3px;
+      
+      background-color: black;
+
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+
+      width: 20px;
+      height: 3px;
+      
+      background-color: black;
+
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::hover {
+      opacity: 0.75;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    font-size: 2rem;
+    font-family: "Roboto Slab", serif;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__specs {
+    font-size: 1.3rem;
+
+    & tr {
+      &:nth-of-type(odd) {
+        background-color: #d4cac5;
+      }
+    }
+
+    & td {
+      padding: 7px 10px; 
+
+      vertical-align: middle;
+      border: 1px solid black;
+    }
+  }
+
+  &__stub-text {
+    margin-top: 20px;
+
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}

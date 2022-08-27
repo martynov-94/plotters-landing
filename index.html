@@ -12,12 +12,45 @@
   </head>
   <body>
     <div class="wrapper">
-      <section class="popup-window visually-hidden">
-        <div class="popup-window__content">
-          <button class="popup-window__close-btn"></button>
-          <h2 class="popup-window__title"></h2>
-          <table class="popup-window__specs"></table>
-          <p class="popup-window__stub-text"></p>
+      <section class="specs-popup-window visually-hidden">
+        <div class="specs-popup-window__content">
+          <button class="specs-popup-window__close-btn"></button>
+          <h2 class="specs-popup-window__title"></h2>
+          <table class="specs-popup-window__specs"></table>
+          <p class="specs-popup-window__stub-text"></p>
+        </div>
+      </section>
+      <section class="order-popup-window visually-hidden">
+        <div class="order-popup-window__content">
+          <button class="order-popup-window__close-btn"></button><img class="order-popup-window__picture" src="components/order-popup-window/img/plotter-at-work.jpg" alt="A cutting plotter doing it work"/>
+          <h2 class="order-popup-window__title">Оставьте заявку</h2>
+          <p class="order-popup-window__text">Мы вам перезвоним</p>
+          <form class="order-popup-window__form" action="" method="get">
+            <div class="order-popup-window__name-block">
+              <label class="order-popup-window__input-label" for="order-popup-window__input-name">Имя:</label>
+              <input class="order-popup-window__input" type="text" name="name" id="order-popup-window__input-name"/>
+            </div>
+            <div class="order-popup-window__phone-block">
+              <label class="order-popup-window__input-label" for="order-popup-window__input-phone">* Телефон:</label>
+              <input class="order-popup-window__input" type="tel" name="phone" id="order-popup-window__input-phone" required="required"/>
+            </div>
+            <div class="order-popup-window__select-menu">
+              <label class="order-popup-window__input-label" for="order-popup-window__select">Заявка:</label>
+              <select class="order-popup-window__select" name="topic" id="order-popup-window__select">
+                <option class="order-popup-window__select-option" value="jinka-pe">Купить Jinka PE</option>
+                <option class="order-popup-window__select-option" value="rabbit-n">Купить Rabbit N</option>
+                <option class="order-popup-window__select-option" value="rabbit-n">Купить Rabbit K</option>
+                <option class="order-popup-window__select-option" value="rabbit-n">Купить Jinka XL</option>
+                <option class="order-popup-window__select-option" value="rabbit-n">Купить Термопресс</option>
+                <option class="order-popup-window__select-option" value="consult">Получить консультацию</option>
+              </select>
+            </div>
+            <div class="order-popup-window__message-block">
+              <label class="order-popup-window__textarea-label" for="order-popup-window__message-area">Сообщение:</label>
+              <textarea class="order-popup-window__textarea" name="message" cols="30" rows="5" id="order-popup-window__message-area"></textarea>
+            </div>
+            <button class="order-popup-window__submit-btn btn btn_small" type="submit">Отправить</button>
+          </form>
         </div>
       </section>
       <header class="page-header" id="page-header"><a class="page-header__home-link" href="#">
