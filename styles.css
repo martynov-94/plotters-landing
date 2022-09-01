@@ -672,7 +672,7 @@ button:focus {
   position: absolute;
   z-index: 1;
   width: 100%;
-  background: no-repeat url(components/description/img/hero_image.jpg);
+  background: no-repeat url(img/description/hero_image.jpg);
   background-size: cover;
   filter: brightness(0.8) contrast(0.5);
 }
@@ -1018,7 +1018,7 @@ button:focus {
 .shipment {
   padding: 36px 4vw;
   color: white;
-  background: url(components/shipment/img/shipment_truck.jpg) no-repeat 100% 100%;
+  background: url(img/shipment/shipment_truck.jpg) no-repeat 100% 100%;
   background-size: cover;
   text-shadow: -1px -1px 2px black, 2px 2px 2px black;
 }
