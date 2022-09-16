@@ -1,0 +1,58 @@
+-
+  const driversPath = "drivers/";
+  const driversList = [
+    {
+      name: "Драйвера для Windows XP (32 и 64-битная система) для Rabbit N серии",
+      src: driversPath + "xp_usb_n.rar"
+    },
+    {
+      name: "Драйвера для Windows 7 (32 и 64-битная система) для Rabbit K серии",
+      src: driversPath + "win7_usb.rar"
+    },
+    {
+      name: "Драйвера для Windows XP (32 и 64-битная система) для Rabbit K серии",
+      src: driversPath + "xp_usb.rar"
+    },
+    {
+      name: "Драйвера для Windows 7 (32-битная система) для Rabbit N серии",
+      src: driversPath + "driver_for_n_g_winxp_win7_32.zip"
+    },
+    {
+      name: "USB-драйвер для программы ArtCut",
+      src: driversPath + "USB-Driver-for-Artcut-software.zip"
+    },
+    {
+      name: "Драйвера для Windows 7 (64-битная система) для Rabbit N серии",
+      src: driversPath + "driver_for_n_g_winxp_win7_32.zip"
+    },
+    {
+      name: "USB-драйвер для режущих плоттеров Rabbit",
+      src: driversPath + "Rabbit-USB-Driver-for-Cutting-Plotter.rar"
+    },
+    {
+      name: "Virtual COM Port Driver",
+      src: driversPath + "Virtual-COM-Port-Driver.zip"
+    },
+    {
+      name: "Программа CutToolCDR-CUT-9.4 для плоттера NX",
+      src: driversPath + "CutToolCDR-CUT-9.4_NX-Plotter.zip"
+    },
+    {
+      name: "Программа CutToolCDR-LAS-9.3 для плоттера K3",
+      src: driversPath + "CutToolCDR-LAS-9.3_K3-Plotter.rar"
+    },
+    {
+      name: "Программа CutToolCDR-Multi-9.7 для плоттера K3",
+      src: driversPath + "CutToolCDR-Multi-9.7_K3-Plotter.zip"
+    },
+  ];
+
+
+mixin drivers(className)
+  section(class=className id="drivers")
+    h2.drivers__title Драйверы
+    details.drivers__summary-title
+      summary.drivers__label Скачать
+      ul.drivers__list
+        each driver in driversList
+          a.drivers__item(href=driver.src)= driver.name

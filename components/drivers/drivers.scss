@@ -1,0 +1,51 @@
+.drivers {
+  grid-column: 2;
+  padding: 10px 30px 20px;
+
+  border-bottom: 1px solid black;
+
+  &__title {
+    margin: 20px;
+
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &__summary-title {
+    font-size: 1.2rem;
+  }
+
+  &__label {
+    cursor: pointer;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px;
+    margin-bottom: 5px;
+
+    color: white;
+    text-shadow: 1px 1px black;
+    text-decoration: none;
+    text-align: center;
+
+    background: linear-gradient(to bottom, rgba(102,115,186,1) 0%, rgba(80,81,82,1) 100%);
+    border: 1px solid gray;
+
+    transition: all 1s linear;
+
+    &:hover {
+      cursor: pointer;
+      background: linear-gradient(to top, rgba(102,115,186,1) 0%, rgba(80,81,82,1) 100%);
+    }
+  }
+}
