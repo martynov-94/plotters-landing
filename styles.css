@@ -1180,3 +1180,7 @@ button:focus {
   cursor: pointer;
   background: linear-gradient(to top, #6673ba 0%, #505152 100%);
 }
+
+.video {
+  grid-column: 2;
+}

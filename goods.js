@@ -128,6 +128,15 @@ const goods = [
 
 
     {
+      id: "12",
+      name: "Jinka JK-721 PE Pro",
+      specs: [
+        
+      ]
+    },
+
+
+    {
       id: "3",
       name: "Jinka JK-1101 PE",
       specs: [
@@ -192,6 +201,15 @@ const goods = [
 
 
     {
+      id: "13",
+      name: "Jinka JK-1101 PE Pro",
+      specs: [
+        
+      ]
+    },
+
+
+    {
       id: "4",
       name: "Jinka JK-1351 PE",
       specs: [
@@ -251,6 +269,14 @@ const goods = [
           name: "Гарантия",
           value: "1 год"
         },
+      ]
+    },
+
+    {
+      id: "14",
+      name: "Jinka JK-1351 PE Pro",
+      specs: [
+        
       ]
     },
 
