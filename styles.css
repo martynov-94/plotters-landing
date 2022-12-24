@@ -807,6 +807,11 @@ button:focus {
   font-size: 2rem;
   font-weight: bold;
 }
+.plotter-card__annotation {
+  margin-top: -5px;
+  margin-bottom: 10px;
+  color: #544943;
+}
 .plotter-card__price {
   margin-bottom: 12px;
   font-size: 1.5rem;
