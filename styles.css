@@ -1189,3 +1189,24 @@ button:focus {
 .video {
   grid-column: 2;
 }
+
+.contacts {
+  grid-column: 2;
+  padding: 10px 30px 20px;
+  border-bottom: 1px solid black;
+}
+.contacts__title {
+  margin: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+.contacts__plain-text {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.contacts__name {
+  font-weight: bold;
+}
+.contacts__name, .contacts__ogrn, .contacts__ks, .contacts__legal-address, .contacts__physical-address {
+  margin-bottom: 20px;
+}
