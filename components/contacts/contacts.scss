@@ -1,11 +1,16 @@
 .contacts {
   grid-column: 2; 
-  padding: 10px 30px 20px;
+  padding: 40px 45px 60px;
 
+  color: white;
+  
+  background: url(img/contacts/bg.jpg) no-repeat 100% 100%;
+  background-size: cover;
   border-bottom: 1px solid black;
 
   &__title {
     margin: 20px;
+    margin-bottom: 32px;
 
     font-size: 2rem;
     text-align: center;
