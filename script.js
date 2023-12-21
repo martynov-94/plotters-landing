@@ -75,7 +75,12 @@ specsPopupCloseButton.onclick = () => {
 const orderBtn = getEl(".page-header__order-btn"),
       orderPopupWindow = getEl(".order-popup-window"),
       orderPopupContent = getEl('.order-popup-window__content'),
-      orderPopupCloseButton = getEl('.order-popup-window__close-btn');
+      orderPopupCloseButton = getEl('.order-popup-window__close-btn'),
+      orderPopupSelectField = getEl('.order-popup-window__select'),
+      orderPopupSubmitButton = getEl('.order-popup-window__submit-btn'),
+      orderPopupSenderName = getEl('#order-popup-window__input-name'),
+      orderPopupSenderPhone = getEl('#order-popup-window__input-phone'),
+      orderPopupMailBody = getEl('#order-popup-window__message-area');
 
 orderBtn.onclick = () => {
   orderPopupWindow.classList.remove("visually-hidden");
@@ -91,6 +96,43 @@ orderPopupWindow.onclick = (e) => {
   }
 };
 
+orderPopupSelectValues = {
+  "jinka-pe": "Купить Jinka PE",
+  "rabbit-n": "Купить Rabbit N",
+  "rabbit-k": "Купить Rabbit K",
+  "jinka-xl": "Купить Jinka XL",
+  "heat-press": "Купить Термопресс",
+  "consult": "Получить консультацию"
+}
+
+// отправка сообщения при нажатии кнопки "Заказать"
+const orderPopupForm = getEl(".order-popup-window__form");
+
+orderPopupForm.addEventListener("submit", e => {
+  e.preventDefault();
+
+  const mailSubject = orderPopupSelectValues[orderPopupSelectField.value];
+  const senderName = orderPopupSenderName.value;
+  const senderPhone = orderPopupSenderPhone.value;
+  const mailBody = orderPopupMailBody.value;
+
+  const message = `
+Отправитель: ${senderName}
+Телефон: ${senderPhone}
+
+${mailBody}
+`;
+
+  window.open(`mailto:vitalj.vg@yandex.ru?subject=${mailSubject}&body=${message}`);
+
+  orderPopupSelectField.value = "jinka-pe";
+  orderPopupSenderName.value = "";
+  orderPopupSenderPhone.value = "";
+  orderPopupMailBody.value = "";
+
+  orderPopupWindow.classList.add("visually-hidden");
+});
+
 
 document.onkeydown = (evt) => {
   if (evt.key == "Escape") {
@@ -104,3 +146,33 @@ document.onkeydown = (evt) => {
 function callNumber() {
   open("tel://+79622021066");
 }
+
+
+// отправка сообщения в футере
+const footerForm = getEl(".page-footer__form"),
+      footerFormName = getEl("#page-footer__input-name"),
+      footerFormPhone = getEl("#page-footer__input-phone"),
+      footerFormMessage = getEl("#page-footer__message-area");
+
+footerForm.addEventListener("submit", e => {
+  e.preventDefault();
+
+  const mailSubject = "Сообщение с сайта CPU-Plotters";
+
+  const name = footerFormName.value;
+  const phone = footerFormPhone.value;
+  const messageBody = footerFormMessage.value;
+
+  const message = `
+Отправитель: ${name}
+Телефон: ${phone}
+
+${messageBody}
+`;
+
+  window.open(`mailto:vitalj.vg@yandex.ru?subject=${mailSubject}&body=${message}`);
+
+  footerFormName.value = "";
+  footerFormPhone.value = "";
+  footerFormMessage.value = "";
+});
