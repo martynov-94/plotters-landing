@@ -806,6 +806,7 @@ button:focus {
   margin-bottom: 10px;
   font-size: 2rem;
   font-weight: bold;
+  text-align: center;
 }
 .plotter-card__annotation {
   margin-top: -5px;
