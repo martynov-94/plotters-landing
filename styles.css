@@ -376,9 +376,17 @@ body {
 }
 
 .visually-hidden {
-  visibility: hidden;
-  opacity: 0;
-  height: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  border: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
 }
 
 button:focus {

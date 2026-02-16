@@ -17,14 +17,21 @@ body {
   font-family: 'Exo 2', sans-serif;
 
   background-color: #d4cac5;
-  // background: linear-gradient(to right, #d4cac5, #caafa5);
   overflow-x: hidden;
 }
 
 .visually-hidden {
-  visibility: hidden;
-  opacity: 0;
-  height: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  border: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
 }
 
 button:focus {
@@ -35,16 +42,12 @@ button:focus {
   display: flex;
   flex-direction: column;
   min-height: 101vh;
-  // padding-top: 20px;
-  // padding: 20px 5vw 0;
 
   background-color: #d4cac5;
-  // background: linear-gradient(to right, #d4cac5, #caafa5);
 
   @media (min-width: $breakpoint-large) {
     display: grid;
     grid-template-columns: 300px 1fr;
-    // padding-left: 300px;
   }
 }
 
