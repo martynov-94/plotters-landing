@@ -819,6 +819,7 @@ button:focus {
 .plotter-card__annotation {
   margin-top: -5px;
   margin-bottom: 10px;
+  text-align: center;
   color: #544943;
 }
 .plotter-card__price {
@@ -901,6 +902,8 @@ button:focus {
   text-align: center;
 }
 .specs-popup-window__specs {
+  display: flex;
+  justify-content: center;
   font-size: 1.3rem;
 }
 .specs-popup-window__specs tr:nth-of-type(odd) {
